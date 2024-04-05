@@ -1,0 +1,14 @@
+dd the Jenkins Repository:-
+	 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+Import a key file from Jenkins-CI to enable installation from the package:-
+	sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+Install Jenkins:-
+	sudo dnf install jenkins -y
+Start and Enable Jenkins:-
+	sudo systemctl enable jenkins
+	sudo systemctl start jenkins
+Access Jenkins:-
+	http://your_amazon_linux_instance_ip:8080
+Retrieve the password with the following command:-	
+	sudo cat /var/lib/jenkins/secrets/initialAdminPassword
